@@ -9,3 +9,17 @@
     elem.classList.toggle('active');    
     elem1.classList.toggle('active');
   }
+
+  var galleryThumbs = new Swiper('.product-item__gallery-thumbs', {
+    spaceBetween: 10,
+    slidesPerView: 10,
+    freeMode: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+  });
+  var galleryTop = new Swiper('.product-item__gallery-top', {
+    spaceBetween: 0,
+    thumbs: {
+      swiper: galleryThumbs
+    }
+  });

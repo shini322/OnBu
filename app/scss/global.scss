@@ -45,6 +45,15 @@
     font-style: normal;
   }
 @font-face {
+    font-family: 'Cera Pro';
+    src: local('Cera Pro Black'), local('Cera-Pro-Black'),
+        url('../fonts/CeraPro-Black.woff2') format('woff2'),
+        url('../fonts/CeraPro-Black.woff') format('woff'),
+        url('../fonts/CeraPro-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
     font-family: 'Open Sans';
     src: url('../fonts/opensans.ttf');
     src: url('OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
@@ -104,9 +113,7 @@ button{
 }
 
 .container{
-    position: relative;
-    padding: 0 15px;
-    max-width: 1842px;
+    position: relative;    
     &--flex{
         display: flex;
         align-items: center;
@@ -114,6 +121,17 @@ button{
     &--between{
         justify-content: space-between;
     }
+    @media screen and (min-width: 1300px){
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    @media screen and (min-width: 1630px){
+        max-width: 1550px;
+        margin: 0 auto;
+    }
+    
+      
 }
 .header{
     display: flex;
@@ -123,6 +141,9 @@ button{
     background-color: #5b6166;
     &__burger{
         padding-left: 16px;
+        @media screen and (min-width:1600px){
+            pointer-events: none;
+        }
     }
     &__left-side{
         display: flex;
@@ -143,7 +164,7 @@ button{
     display: none;
     margin-left: 33px;
     a{
-        font-family: 'Roboto Regular';
+        font-family: 'Roboto';
         font-size: 15px;
         line-height: 26px;
         text-decoration: underline;
@@ -191,8 +212,9 @@ button{
     width: 0;
     background-color: #5b6166;
     transition: .5s;
+    z-index: 10;
     a{
-        font-family: 'Roboto Regular';
+        font-family: 'Roboto';
         font-size: 15px;
         line-height: 26px;
         text-decoration: underline;
@@ -325,7 +347,8 @@ button{
     }
     &__menu-title{
         margin-bottom: 10px;
-        font-family: 'Roboto Bold';
+        font-family: 'Roboto';
+        font-weight: 700;
         font-size: 15px;
         line-height: 21px;
     }
@@ -625,6 +648,10 @@ button{
         display: flex;
         align-items: center;
         justify-content: center;
+        @media screen and (min-width: 1024px){
+            padding: 0 15px;
+            justify-content: start;
+        }
         li{
             position: relative;
             padding-right: 10px;

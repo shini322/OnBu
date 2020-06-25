@@ -13,12 +13,18 @@
   var galleryThumbs = new Swiper('.product-item__gallery-thumbs', {
     spaceBetween: 10,
     slidesPerView: 10,
-    freeMode: true,
-    watchSlidesVisibility: true,
     watchSlidesProgress: true,
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+      },
+      
+    },
   });
   var galleryTop = new Swiper('.product-item__gallery-top', {
-    spaceBetween: 0,
+    spaceBetween: 10,
+    slidesPerView: 1,
+    
     thumbs: {
       swiper: galleryThumbs
     }

@@ -13,7 +13,6 @@
   var galleryThumbs = new Swiper('.product-item__gallery-thumbs', {
     spaceBetween: 10,
     slidesPerView: 10,
-    watchSlidesProgress: true,
     breakpoints: {
       768: {
         slidesPerView: 3,

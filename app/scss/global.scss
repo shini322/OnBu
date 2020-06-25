@@ -169,6 +169,9 @@ button{
         line-height: 26px;
         text-decoration: underline;
         color: #fff;
+        &:hover{
+            text-decoration: none;
+        }
     }
     li{
         display: none;
@@ -554,6 +557,7 @@ button{
         max-width: 38px;
         box-sizing: border-box;
         filter: grayscale(100%);
+        transition: .3s;
         &--vk{
             background-color: #6693bb;
         }
@@ -566,6 +570,9 @@ button{
         }
         &--odnoklassniki{
             background-color: #fc8f05;
+        }
+        &:hover{
+            filter: none;
         }
     }
     &__social-link + &__social-link{

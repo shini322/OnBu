@@ -63,7 +63,8 @@
     box-sizing: border-box;
     @media screen and (min-width: 1024px){
         display: flex;
-        padding: 0 15px 39px;
+        padding: 30px 15px 39px;
+        margin-top: 0;
     }
     &__gallery{        
         @media screen and (min-width: 1024px){
@@ -122,6 +123,7 @@
         background-repeat: no-repeat;
         border-radius: 3px;
         opacity: .5;
+        cursor: pointer;
         @media screen and (min-width: 768px){
             width: 120px !important;
             height: 90px;
@@ -167,6 +169,7 @@
         }
         @media screen and (min-width: 1024px){
             &--ruble{
+                font-family: 'Roboto';
                 font-size: 25px;
                 line-height: 57px;
             }
@@ -174,6 +177,7 @@
         }
         @media screen and (min-width: 1300px){
             &--ruble{
+                font-family: 'Roboto';
                 line-height: 22px;
             }
         }
@@ -207,18 +211,18 @@
         font-size: 12px;
         line-height: 22px;
         color: #4d5156;
-        &:before{
-            content: "";
-            position: absolute;
-            margin-top: -4px;
-            width: 10px;
-            height: 8px;
-            left: 0;
-            top: 50%;
-            background-image: url(../images/check.png);
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
+        // &:before{
+        //     content: "";
+        //     position: absolute;
+        //     margin-top: -4px;
+        //     width: 10px;
+        //     height: 8px;
+        //     left: 0;
+        //     top: 50%;
+        //     background-image: url(../images/check.svg);
+        //     background-repeat: no-repeat;
+        //     background-size: cover;
+        // }
         @media screen and (min-width: 768px){
             margin-left: 22px;
         }
@@ -229,6 +233,11 @@
             flex-shrink: 0;
         }
         
+    }
+    .icon-check{
+        margin-right: 5px;
+        width: 10px;
+        height: 8px;
     }
     &__price-right{
         font-family: 'Cera Pro';
@@ -291,6 +300,10 @@
     }
     &__assessment{
         margin-left: 5px;
+    }
+    &__assessment-star{
+        width: 14px;
+        height: 13px;
     }
     &__assessment-text{
         font-family: 'Open Sans';
@@ -356,6 +369,10 @@
     &__button-img{
         margin-right: 8px;
     }
+    .icon-message{
+        width: 17px;
+        height: 13px;
+    }
     &__button-message{
         background-color: #cfd3d6;
         color: #202124;
@@ -414,6 +431,14 @@
     }
     &__bottom-side-item + &__bottom-side-item{
         margin-left: 25px;
+    }
+    &__save-bookmark{
+        .icon-heart{
+            margin-right: 3px;
+            width: 12px;
+            height: 11px;
+            fill: #b3b6bb;
+        }
     }
 }
 .product-side{
@@ -506,6 +531,16 @@
             justify-content: space-between;
         }
     }
+    &__ailability{
+        .icon-check{
+            margin-right: 5px;
+            width: 10px;
+            height: 8px;
+        }
+        @media screen and (min-width: 1630px){
+            padding-left: 0;
+        }
+    }
 }
 .product-side + .product-side{
     margin-top: 25px;
@@ -570,6 +605,7 @@
         }
         &::after{
             content: '';
+            position: absolute;
             width: 11px;
             height: 8px;
             background-image: url(../images/select-slick.png);

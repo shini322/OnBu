@@ -1,10 +1,4 @@
-.main{
-    padding: 32px 0 155px;
-    background-color: #f7f7f7;
-    @media screen and (min-width: 1630px){
-        padding-bottom: 87px;
-    }
-}
+
 
 .page-content{
     @media screen and (min-width: 1630px){
@@ -13,22 +7,10 @@
         }
     }
 }
+
 .product{
     &__title{
         margin-top: 15px;
-        font-family: 'Roboto';
-        font-size: 22px;
-        line-height: 27px;
-        font-weight: 700;
-        color: #5b6166;
-        text-align: center;
-        background-color: #f7f7f7;
-        @media screen and (min-width: 1024px){
-            text-align: left;
-            font-size: 39px;
-            line-height: 42px;
-            padding: 0 15px;
-        }
     }
     &__subtitle{
         padding-top: 22px;
@@ -55,6 +37,115 @@
     &__item{
         margin-top: 17px;
     }
+}
+.product-side{
+    padding: 0 15px;
+    @media screen and (min-width: 1630px){
+        padding: 0;
+    }
+    &__title{        
+        font-family: 'Roboto';
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21px;
+        color: #5b6166;
+    }
+    &__container{
+        margin-top: 7px;
+    }
+    &__img-block{
+        margin-right: 13px;
+        width: 120px;
+        height: 90px;
+        border-radius: 5px;
+        float: left;
+    }
+    &__img{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        border-radius: 5px;
+    }
+    &__desc-container{
+        margin-left: 10px;
+        @media screen and (min-width: 768px){
+            width: 84%;
+        }
+        @media screen and (min-width: 1024px){
+            width: 100%;
+        }
+    }
+    &__desc{
+        font-family: 'Open Sans';
+        font-size: 13px;
+        line-height: 19px;
+        color: #5f6368;
+    }
+    &__price{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        font-size: 19px;
+        max-width: 162px;
+        &--ruble{
+            
+            font-size: 12px;
+        }
+        @media screen and (min-width: 768px){
+           max-width: 100%;
+           width: auto;
+           align-items: center !important;
+           
+        }
+    }
+    &__price-container{
+        font-family: 'Cera Pro';
+        font-weight: 500;
+        font-size: 19px;
+    }
+    &__state{
+        font-family: 'Open Sans';
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 20px;
+        color: #5b6166;
+        @media screen and (min-width: 768px){
+            display: none;
+        }
+        @media screen and (min-width: 1630px){
+            display: block;
+        }
+        &--desktop{
+            display: none;
+            @media screen and (min-width: 768px){
+                display: block;
+            }
+            @media screen and (min-width: 1630px){
+                display: none;
+            }
+        }
+    }
+    &__block{
+        @media screen and (min-width: 1300px){
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &__ailability{
+        .icon-check{
+            margin-right: 5px;
+            width: 10px;
+            height: 8px;
+        }
+        @media screen and (min-width: 1630px){
+            padding-left: 0;
+        }
+    }
+}
+.product-side + .product-side{
+    margin-top: 25px;
 }
 .product-item{
     background-color: #fff;
@@ -85,6 +176,7 @@
         flex-wrap: wrap;
         justify-content: center;
         margin-top: 14px;
+        transform: initial !important;
         @media screen and (min-width: 1024px){
             justify-content: space-between;
             margin-top: 0;
@@ -149,6 +241,9 @@
     }
     &__price-container{
         margin-top: 25px;
+        @media screen and (min-width: 768px){
+            padding-bottom: 20px;
+        }
         @media screen and (min-width: 1024px){
             margin-top: 0;
         }
@@ -205,7 +300,7 @@
     }
     &__ailability{
         position: relative;
-        padding-left: 15px;
+        
         font-family: 'Roboto';
         font-weight: 400;
         font-size: 12px;
@@ -225,6 +320,7 @@
         // }
         @media screen and (min-width: 768px){
             margin-left: 22px;
+            padding-left: 15px;
         }
         @media screen and (min-width: 1024px){
             line-height: 47px;
@@ -326,23 +422,16 @@
         font-size: 13px;
         line-height: 22px;
         color: #202124;
+        .icon-arrow-down{
+            width: 10px;
+            height: 8px;
+        }
     }
     &__work-time{
         position: relative;
-        padding-right: 16px;
+        padding-right: 9px;
         color: #8b929c;
-        &::after{
-            content: "";
-            position: absolute;
-            margin-top: -2.5px;
-            width: 7px;
-            height: 5px;
-            background-image: url(../images/slick.png);
-            background-size: cover;
-            background-repeat: no-repeat;
-            right: 0;
-            top: 50%;
-        }
+        
     }
     &__buttons-container{
         margin-top: 25px;
@@ -361,6 +450,9 @@
         max-width: 220px;
         min-height: 49px;
         border-radius: 5px;
+        &:hover{
+            text-decoration: underline;
+        }
     }
     &__button-number{
         background-color: #97b431;
@@ -428,127 +520,32 @@
         font-size: 12px;
         line-height: 22px;
         color: #b3b6bb;
+        &:hover{
+            text-decoration: underline;
+        }
     }
     &__bottom-side-item + &__bottom-side-item{
         margin-left: 25px;
     }
     &__save-bookmark{
+        display: flex;
+        align-items: center;
         .icon-heart{
             margin-right: 3px;
             width: 12px;
             height: 11px;
             fill: #b3b6bb;
         }
+        
     }
-}
-.product-side{
-    padding: 0 15px;
-    @media screen and (min-width: 1630px){
-        padding: 0;
-    }
-    &__title{        
-        font-family: 'Roboto';
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 21px;
-        color: #5b6166;
-    }
-    &__container{
-        margin-top: 7px;
-    }
-    &__img-block{
-        margin-right: 13px;
-        width: 120px;
-        height: 90px;
-        border-radius: 5px;
-        float: left;
-    }
-    &__img{
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: fill;
-        border-radius: 5px;
-    }
-    &__desc-container{
-        margin-left: 10px;
-        width: 55%;
-        @media screen and (min-width: 768px){
-            width: 84%;
-        }
-    }
-    &__desc{
-        font-family: 'Open Sans';
-        font-size: 13px;
-        line-height: 19px;
-        color: #5f6368;
-    }
-    &__price{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        font-size: 19px;
-        max-width: 162px;
-        &--ruble{
-            
-            font-size: 12px;
-        }
-        @media screen and (min-width: 768px){
-           max-width: 100%;
-           width: auto;
-        }
-    }
-    &__price-container{
-        font-family: 'Cera Pro';
-        font-weight: 500;
-    }
-    &__state{
-        font-family: 'Open Sans';
-        font-weight: 400;
-        font-size: 13px;
-        line-height: 20px;
-        color: #5b6166;
-        @media screen and (min-width: 768px){
-            display: none;
-        }
-        @media screen and (min-width: 1630px){
-            display: block;
-        }
-        &--desktop{
-            display: none;
-            @media screen and (min-width: 768px){
-                display: block;
-            }
-            @media screen and (min-width: 1630px){
-                display: none;
-            }
-        }
-    }
-    &__block{
-        @media screen and (min-width: 1300px){
-            display: flex;
-            justify-content: space-between;
-        }
-    }
-    &__ailability{
-        .icon-check{
-            margin-right: 5px;
-            width: 10px;
-            height: 8px;
-        }
-        @media screen and (min-width: 1630px){
-            padding-left: 0;
-        }
-    }
-}
-.product-side + .product-side{
-    margin-top: 25px;
 }
 .side-bar{
-    padding-top: 43px;
+    padding-top: 26px;
     padding-bottom: 35px;
     background-color: #f7f7f7;
+    &--white{
+        background-color: #fff;
+    }
     @media screen and (min-width: 1024px){
         display: none;
     }
@@ -567,17 +564,21 @@
     }
     @media screen and (min-width: 1630px){
         max-width: 360px;
-        margin-top: 65px;
+        padding-top: 0;
+        margin-top: 0;
         margin-left: 36px;
         flex-direction: column;
         &__container{
             margin: 0 auto;
-            padding: 26px 5px 40px 15px;
+            padding: 26px 15px 40px;
+            min-width: 320px;
         }
     }
     
 }
+
 .filters{
+    display: none;
     width: 240px;
     &__container{
         display: flex;
@@ -617,6 +618,7 @@
     }
     &__input{
         padding: 7px 15px 10px;
+        width: 100%;
         background-color: #fff;
         border: 1px solid #d3d3d3;
         font-family: 'Roboto';
@@ -644,12 +646,21 @@
         border-radius: 3px;
     }
     &__more-settings{
-        font-weight: 'Roboto';
+        font-family: 'Roboto';
         font-size: 12px;
         line-height: 26px;
         color: #8b929c;
         text-decoration: underline;
         text-align: center;
+    }
+    &__select-container{
+        width: 100%;
+        &--w50{
+            width: 50%;
+        }
+    }
+    @media screen and (min-width: 1630px){
+        display: block;
     }
     @media screen and (min-width: 1630px){
         margin: 50px auto 0;

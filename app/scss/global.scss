@@ -154,6 +154,17 @@ button{
         align-items: center;
         margin-left: auto;
     }
+    &__town{
+        .icon-location-arrow{
+            margin-right: 6px;
+            width: 11px;
+            height: 11px;
+            fill: #fff;
+        }
+        &:hover{
+            text-decoration: underline;
+        }
+    }
 }
 .logo{
     &__img{
@@ -294,6 +305,9 @@ button{
     }
     &__text{
         display: none;
+        &:hover{
+            text-decoration: underline;
+        }
     }
     @media screen and (min-width:650px){
         margin-left: 15px;
@@ -430,6 +444,9 @@ button{
             margin-left: auto;
             text-align: right;
         }
+        &:hover{
+            text-decoration: underline;
+        }
     }
     &__menu-link-site{
         font-family: 'Open Sans';
@@ -440,6 +457,7 @@ button{
         @media screen and (min-width:600px){
             display: none;
         }
+        
     }
     &__menu-link-lk{
         display: inline-block;
@@ -449,6 +467,9 @@ button{
         line-height: 24px;
         color: #252525;
         text-align: center;
+        &:hover{
+            text-decoration: underline;
+        }
         
     }
     &__medium{
@@ -619,12 +640,13 @@ button{
     max-width: 175px;
     
     &__container{
+        position: relative;
+        padding: 18px 13px 16px;
         border: 1px solid #cfd3d6;
     }
     &__title{
-        padding: 0 10px;
-        margin: -8px auto 0;
-        max-width: 95px;
+        position: absolute;
+        padding: 0 5px;
         font-family: 'Open Sans';
         font-size: 10px;
         line-height: 16px;
@@ -632,6 +654,9 @@ button{
         color: #8b929c;
         background-color: #e0e3e6;
         text-align: center;
+        top: -8px;
+        transform: translateX(-50%);
+        left: 50%;
     }
     &__total{
         margin-top: 11px;
@@ -648,6 +673,15 @@ button{
     }
     &__total-item + &__total-item{
         margin-left: 5px;
+    }
+    &__stars{
+        display: flex;
+    }
+    &__stars-item{
+        .icon-star{
+            width: 29px;
+            height: 28px;
+        }
     }
 }
 .breadcrumbs{
@@ -682,6 +716,9 @@ button{
             font-size: 14px;
             line-height: 22px;
             color: #202124;
+            &:hover{
+                text-decoration: underline;
+            }
             
         }
         span{
@@ -691,9 +728,28 @@ button{
     }
 }
 
-
-
-
+.page-title{
+    font-family: 'Roboto';
+    font-size: 22px;
+    line-height: 27px;
+    font-weight: 700;
+    color: #5b6166;
+    text-align: center;
+    background-color: #f7f7f7;
+    @media screen and (min-width: 1024px){
+        text-align: left;
+        font-size: 39px;
+        line-height: 42px;
+        padding: 0 15px;
+    }
+}
+.main{
+    padding: 32px 0 45px;
+    background-color: #f7f7f7;
+    @media screen and (min-width: 1630px){
+        padding-bottom: 87px;
+    }
+}
 
 
 
@@ -730,3 +786,4 @@ button{
 .burger.active .rect:nth-child(3) {
   transform: rotate(-45deg) translateX(4px) translateY(-4px);  
 }
+

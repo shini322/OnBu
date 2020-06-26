@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/global.min.css">
     <link rel="stylesheet" href="img/sprite.svg">
     <link rel="stylesheet" href="css/start-category.min.css">
+    <link rel="stylesheet" href="css/category.min.css">
 </head>
 <body>
     <div class="wrapper">
@@ -78,9 +79,13 @@
                 </nav>
             </div>
             <div class="page-content">
-                <div class="container page-content__container">
+                <div class="container">
+                    <div class="page-title category__title">Запчасти БУ для Audi A3 2003-2010</div>
+                </div>
+                <div class="container page-content__container container--category-md">
+                    
                     <div class="category">
-                        <div class="page-title">Запчасти БУ для Audi A3 2003-2010</div>
+                        
                         <div class="category__block">
                             <div class="category__filter-container">
                                 <div class="category__filter-item category__filter-item--w50">
@@ -94,21 +99,26 @@
                                     </select>
                                 </div>
                                 <div class="category__filter-item category__filter-item--w50">
-                                    <select name="" id="" class="category__select">
+                                    <select name="" id="" class="category__select category__select--border-bottom">
                                         <option value="1" class="category__option">Год выпуска</option>
                                     </select>
                                 </div>
                                 <div class="category__filter-item category__filter-item--w50">
-                                    <select name="" id="" class="category__select">
+                                    <select name="" id="" class="category__select category__select--border-bottom">
                                         <option value="1" class="category__option">Год выпуска</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="category__filter-container">
                                 <div class="category__filter-item">
-                                    <select name="" id="" class="category__select">
-                                        <option value="1" class="category__option">Название запчасти</option>
+                                    <select name="" id="" class="category__select category__select--border-bottom category__select--border-bottom-md-dn">
+                                        <option value="1" class="category__option ">Название запчасти</option>
                                     </select>
+                                    <div class="category__buttons category__buttons--poa category__buttons--md-dn">
+                                        <button class="category__button category__show">Показать — <span class="category__show--total">6720</span></button>
+                                        <button class="category__button category__more-settings">больше параметров</button>
+                                    </div>
+                                    <input type="text" class="category__input category__input--md-db category__input--border-bottom" placeholder="Артикул запчасти">
                                 </div>
                             </div>
                             <div class="category__filter-container">
@@ -123,36 +133,86 @@
                                 <div class="category__filter-item category__filter-item--w50 category__filter-item--border-bottom">
                                     <input type="text" class="category__input" placeholder="Цена, до">
                                 </div>
-                            </div>
-                            <div class="category__buttons">
-                                <button class="category__button category__show">Показать — <span class="category__show--total">6720</span></button>
-                                <button class="category__button category__more-settings">больше параметров</button>
-                            </div>
-                            <div class="category__bottom-settings">
-                                <select name="" id="" class="category__bottom-settings-select">
-                                    <option value="1" class="category__bottom-settings-option">Сначала новые</option>
-                                </select>
-                                <select name="" id="" class="category__bottom-settings-select">
-                                    <option value="1" class="category__bottom-settings-option">Все запчасти</option>
-                                </select>
-                                <div class="category__bottom-container">
-                                    <input type="checkbox" id="photo" class="category__bottom-input">
-                                    <label for="photo" class="category__bottom-label category__bottom-label--input"><svg class="icon icon-check"><use xlink:href="img/sprite.svg#icon-check"></use></svg>с фото</label>
+                            </div>                            
+                        </div>
+                        <div class="category__block category__block--md">
+                            <div class="category__filter-container">
+                                <div class="category__filter-item category__filter-item--w50">
+                                    <select name="" id="" class="category__select">
+                                        <option value="1" class="category__option">Объем</option>
+                                    </select>
                                 </div>
-                                <div class="category__bottom-container">
-                                    <input type="checkbox" id="discont" class="category__bottom-input">
-                                    <label for="discont" class="category__bottom-label category__bottom-label--input"><svg class="icon icon-check"><use xlink:href="img/sprite.svg#icon-check"></use></svg>со скидкой</label>
+                                <div class="category__filter-item category__filter-item--w50">
+                                    <select name="" id="" class="category__select">
+                                        <option value="1" class="category__option">Бензин</option>
+                                    </select>
                                 </div>
-                                <div class="category__bottom-container">
-                                    <label for="total" class="category__bottom-label">Кол-во:</label>
-                                    <select name="" id="total" class="category__bottom-settings-select category__bottom-settings-select--grey">
-                                        <option value="1" class="category__bottom-settings-option">20</option>
+                                <div class="category__filter-item category__filter-item--w50">
+                                    <select name="" id="" class="category__select category__select--border-bottom">
+                                        <option value="1" class="category__option">Коробка</option>
+                                    </select>
+                                </div>
+                                <div class="category__filter-item category__filter-item--w50">
+                                    <select name="" id="" class="category__select category__select--border-bottom">
+                                        <option value="1" class="category__option">Кузов</option>
                                     </select>
                                 </div>
                             </div>
-                            
+                            <div class="category__filter-container">
+                                <div class="category__filter-item">
+                                    <div class="category__buttons category__buttons--poa">
+                                        <button class="category__button category__show">Показать — <span class="category__show--total">6720</span></button>
+                                        <button class="category__button category__more-settings">больше параметров</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="category__filter-container">
+                                <div class="category__filter-item">
+                                    <select name="" id="" class="category__select">
+                                        <option value="1" class="category__option">Город</option>
+                                    </select>
+                                </div>
+                                <div class="category__filter-item category__filter-item--w50 category__filter-item--border-bottom">
+                                    <select name="" id="" class="category__select">
+                                        <option value="1" class="category__option">Дата подачи</option>
+                                    </select>
+                                </div>
+                                <div class="category__filter-item category__filter-item--w50 category__filter-item--border-bottom">
+                                    <select name="" id="" class="category__select">
+                                        <option value="1" class="category__option">Без пробега</option>
+                                    </select>
+                                </div>
+                            </div>                            
+                        </div>
+                        <div class="category__buttons">
+                            <button class="category__button category__show">Показать — <span class="category__show--total">6720</span></button>
+                            <button class="category__button category__more-settings">больше параметров</button>
                         </div>
                         
+                    </div>
+                    <div class="category__bottom-settings">
+                        <select name="" id="" class="category__bottom-settings-select">
+                            <option value="1" class="category__bottom-settings-option">Сначала новые</option>
+                        </select>
+                        <select name="" id="" class="category__bottom-settings-select">
+                            <option value="1" class="category__bottom-settings-option">Все запчасти</option>
+                        </select>
+                        <div class="category__bottom-settings-container">
+                            <div class="category__bottom-container">
+                                <input type="checkbox" id="photo" class="category__bottom-input">
+                                <label for="photo" class="category__bottom-label category__bottom-label--input"><svg class="icon icon-check"><use xlink:href="img/sprite.svg#icon-check"></use></svg>с фото</label>
+                            </div>
+                            <div class="category__bottom-container">
+                                <input type="checkbox" id="discont" class="category__bottom-input">
+                                <label for="discont" class="category__bottom-label category__bottom-label--input"><svg class="icon icon-check"><use xlink:href="img/sprite.svg#icon-check"></use></svg>со скидкой</label>
+                            </div>
+                            <div class="category__bottom-container">
+                                <label for="total" class="category__bottom-label">Кол-во:</label>
+                                <select name="" id="total" class="category__bottom-settings-select category__bottom-settings-select--grey">
+                                    <option value="1" class="category__bottom-settings-option">20</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
                     <div class="side-bar side-bar--white">
                         <div class="side-bar__container">
@@ -165,14 +225,18 @@
                                         <img src="img/product/main-img-1.jpg" alt="" class="product-side__img">
                                     </div>
                                     <div class="product-side__desc-container">
+                                        
                                         <div class="product-side__desc">
                                             Двигатели › Audi › A3 › 2003-2007 › 1.6 л, дизель, МКПП, хэтчбек
                                         </div>
+                                        <a href="#" class="product-side__title product-side__title--desktop">
+                                            Двигатель к Audi A3, 2012 г.
+                                        </a>
                                         <div class="product-side__block">
                                             <div class="product-side__state product-side__state--desktop">Состояние: б/у из Европы, мкпп 5 ст., небольшой люфт турбины, трещина горячей части турбины , цена указана без навесного, Модель двигателя...</div>
                                             <div class="product-item__price">
                                                 <div class="product-item__price-left product-side__price">
-                                                    <div class="product-side__price-container">659<span class="product-item__price--ruble product-side__price--ruble">₽</span></div>                                    
+                                                    <div class="product-side__price-container">659<span class="product-item__price--ruble product-side__price--ruble rubl">e</span></div>                                    
                                                     <div class="product-item__ailability product-side__ailability"><svg class="icon icon-check"><use xlink:href="img/sprite.svg#icon-check"></use></svg>в наличии</div>
                                                 </div>
                                             </div>
@@ -192,8 +256,9 @@
                                     </span>
                                     <br>
                                     <span class="product-item__tegs-item">5 часов назад</span>
-                                    <div class="product-side__state">Состояние: б/у из Европы, мкпп 5 ст., небольшой люфт турбины, трещина горячей части турбины , цена указана без навесного, Модель двигателя...</div>
+                                    
                                 </div>
+                                <div class="product-side__state">Состояние: б/у из Европы, мкпп 5 ст., небольшой люфт турбины, трещина горячей части турбины , цена указана без навесного, Модель двигателя...</div>
                             </div>
                             <div class="product-side">
                                 <a href="#" class="product-side__title">
@@ -207,11 +272,14 @@
                                         <div class="product-side__desc">
                                             Фары › Audi › A3 › 2003-2007
                                         </div>
+                                        <a href="#" class="product-side__title product-side__title--desktop">
+                                            Фара левая к Audi A3 III (8V) рест. (2016)  Седан, 2016 г. 
+                                        </a>
                                         <div class="product-side__block">
                                             <div class="product-side__state product-side__state--desktop">Запчасть из Германии, оригинал, отличное состояние (20 лет лежал на складе)</div>
                                             <div class="product-item__price">
                                                 <div class="product-item__price-left product-side__price">
-                                                    <div class="product-side__price-container">25670<span class="product-item__price--ruble product-side__price--ruble">₽</span></div>                                    
+                                                    <div class="product-side__price-container">25670<span class="product-item__price--ruble product-side__price--ruble rubl">e</span></div>                                    
                                                     <div class="product-item__ailability product-side__ailability"><svg class="icon icon-check"><use xlink:href="img/sprite.svg#icon-check"></use></svg>в наличии</div>
                                                 </div>  
                                             </div>
@@ -222,30 +290,31 @@
                                     <span class="product-item__tegs-item">Могилев</span>
                                     <span class="product-item__tegs-item">Частное лицо</span>
                                     <span class="product-item__tegs-item">1 мая 2020</span>
-                                    <div class="product-side__state">Запчасть из Германии, оригинал, отличное состояние (20 лет лежал на складе)</div>
+                                    
                                 </div>
-                                
+                                <div class="product-side__state">Запчасть из Германии, оригинал, отличное состояние (20 лет лежал на складе)</div>
                             </div>
-                            
                         </div>
                         
                     </div>
-
-                    <div class="pagination">
-                        <div class="container">
+                    
+                </div>
+                <div class="pagination">
+                    <div class="container">
+                        <div class="pagination__container">
                             <div class="pagination__links">
                                 <a href="#" class="pagination__link">1</a>
                                 <a href="#" class="pagination__link">2</a>
                                 <a href="#" class="pagination__link pagination__link--active">3</a>
+                                <a href="#" class="pagination__link">4</a>
                                 <a href="#" class="pagination__link">...</a>
                                 <a href="#" class="pagination__link">223</a>
                             </div>
-                        </div>
-                        <div class="pagination__arrows">
                             <a href="#" class="pagination__arrow-item"><svg class="icon icon-arrow-pagination"><use xlink:href="img/sprite.svg#icon-arrow-pagination"></use></svg>Пред.</a>
                             <a href="#" class="pagination__arrow-item pagination__arrow-item--next">След.<svg class="icon icon-arrow-pagination"><use xlink:href="img/sprite.svg#icon-arrow-pagination"></use></svg></a>
                         </div>
                     </div>
+                    
                 </div>
             </div>
             
@@ -304,9 +373,7 @@
                         Подать объявление
                    </a>
                    <div class="footer__menu-text-links">
-                    <a href="#" class="footer__menu-link-site">
-                        Belmotors.by
-                   </a>
+                    
                    <a href="#" class="footer__menu-link-lk">
                         Личный кабинет 
                    </a>

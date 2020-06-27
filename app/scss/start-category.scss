@@ -270,6 +270,7 @@
             border: 1px solid #d3d3d3;
             background-color: #fff;
             left: 0;
+            top: 0;
         }
         .icon-check{
             display: none;
@@ -396,6 +397,12 @@
         color: #5f6368;
         @media screen and (min-width: 768px){
             font-size: 14px;
+        }
+    }
+    &__desc-link{
+        color: #5f6368;
+        &:hover{
+            text-decoration: underline;
         }
     }
     &__price{
@@ -638,6 +645,19 @@
             line-height: 22px;
         }
         
+    }
+    &__tegs-item{
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 22px;
+        color: #8b929c;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    &__tegs-item + &__tegs-item{
+        margin-left: 5px;
     }
     &__price-left-container{
         @media screen and (min-width: 768px){

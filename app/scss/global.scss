@@ -129,8 +129,12 @@ button{
 .active{
     display: block;
 }
-.active-select{
+.active-block{
     display: block !important;
+}
+.active-select{
+    display: flex !important;
+    flex-wrap: wrap;
 }
 .dark{
     filter: brightness(0.9);

@@ -63,6 +63,7 @@
         font-size: 13px;
         line-height: 22px;
         color: #fff;
+        cursor: pointer;
         @media screen and (min-width: 700px){
             margin-top: 18px;
             font-size: 15px;
@@ -159,20 +160,24 @@
         
     }
     &__item-input[type=checkbox]:checked + &__item-link{
-        .icon{
-            display: block;
+        .icon-check{
+            display: inline;
         }
     }
     &__item-link{
         cursor: pointer;
-        .icon{
+        .icon-check{
             display: none;
             position: absolute;
-            width: 9px;
-            height: 7px;
-            left: 4px;
+            font-family: 'icomoon';
+            font-size: 7px;
+            left: 5px;
             top: 50%;
             margin-top: -3.5px;
+            color: #000;
+            &::before{
+                content: "\e90a";
+            }
         }
     }
     &__stat{
@@ -197,10 +202,22 @@
             height: 14px;
         }
         .icon-check-circle{
-            fill: #85b028;
+            padding-right: 7px;
+            font-family: 'icomoon';
+            font-size: 12px;
+            color: #97b431;
+            &::before{
+                content: "\e903";
+            }
         }
         .icon-close-circle{
-            fill: #f36628;
+            padding-right: 7px;
+            font-family: 'icomoon';
+            font-size: 12px;
+            color: #f36628;
+            &::before{
+                content: "\e902";
+            }
         }
         &--total{
             padding-left: 5px;
@@ -331,17 +348,20 @@
         border-radius: 3px;
         min-height: 35px;
         transition: .3s;
-        .icon{
-            width: 20px;
-            height: 20px;
-            fill: #afb7be;
+        .icon-upload{
+            font-family: 'icomoon';
+            font-size: 18px;
+            color: #afb7be;
             transition: .3s;
+            &::before{
+                content: "\e901";
+            }
         }
         &--green{
             background-color: #97b431;
             
-            .icon{
-                fill: #fff;
+            .icon-upload{
+                color: #fff;
             }
             &:hover{
                 filter: brightness(0.9);
@@ -397,78 +417,16 @@
         line-height: 14px;
         color: #5b6166;
         border-bottom: 1px solid #5b6166;
+        transition: .3s;
         @media screen and (min-width: 700px){
             margin-bottom: 0;
+        }
+        &:hover{
+            border-bottom-color: transparent;
         }
     }
     &__management-item + &__management-item{
         margin-left: 18px;
     }
 }
-.settings{
-    display: flex;
-    padding-left: 17px;
-    align-items: center;
-    @media screen and (min-width: 768px){
-        padding-left: 45px;
-    }
-    &__text{
-        display: none;
-        font-family: 'Roboto';
-        font-size: 13px;
-        line-height: 17px;  
-        color: #fff;  
-        @media screen and (min-width: 768px){
-            display: inline;
-        }
-    }
-    .icon{
-        margin-right: 9px;
-        width: 18px;
-        height: 18px;
-        fill: #fff;
-    }
-}
-.wallet{
-    display: flex;
-    align-items: center;
-    color: #fff;
-    font-family: 'Roboto';
-    font-size: 13px;
-    line-height: 17px;
-    .icon{
-        display: none;
-        margin-right: 10px;
-        width: 20px;
-        height: 16px;
-        fill: #fff;
-        @media screen and (min-width: 768px){
-            display: block;
-        }
-    }
-}
-.header{
-    &__menu{
-        &--price{
-            li{
-                display: none !important;
-                &:first-child{
-                    @media screen and (min-width: 768px){
-                        display: block !important;
-                    }
-                }
-                &:nth-child(2){
-                    @media screen and (min-width: 1366px){
-                        display: block !important;
-                    }
-                }
-                &:nth-child(3){
-                    @media screen and (min-width: 1600px){
-                        display: block !important;
-                    }
-                }
-            }
-        }
-    }
-    
-}
+

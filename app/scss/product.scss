@@ -118,10 +118,11 @@
         &--w50{
             width: 50%;
         }
-        &--xl{
+        &--hidden{
             display: none;
             @media screen and (min-width: 1630px){
-                display: block;
+                display: flex;
+                flex-wrap: wrap;
             }
         }
         // .select-dropdown__button{

@@ -109,20 +109,26 @@
         
     }
     &__arrow-item{
+        display: flex;
+        align-items: center;
         font-family: 'Open Sans';
         font-size: 13px;
         line-height: 22px;
         color: #4d5156;
         .icon-arrow-pagination{
-            width: 16px;
-            height: 7px;
+            padding-right: 5px;
+            font-family: 'icomoon';
+            font-size: 14px;
+            &:before{
+                content: "\e900";
+            }
         }
         @media screen and (min-width: 768px){
             order: 1;
         }
         &--next{
-            
             .icon-arrow-pagination{
+                display: inline-block;
                 transform: rotate(180deg);
             } 
             @media screen and (min-width: 768px){

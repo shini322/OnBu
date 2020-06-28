@@ -34,7 +34,7 @@
                 display: flex;
             }
             @media screen and (min-width: 1200px){
-                display: none !important;
+                display: none;
             }
         }
         @media screen and (min-width: 768px){
@@ -47,9 +47,13 @@
             padding-bottom: 25px;
         }
         @media screen and (min-width: 1200px){
-           display: block ;
+           display: block;
            padding: 0;
            margin-top: 30%;
+           &--md{
+               display: none;
+               margin-top: 0;
+           }
         }
     }
     &__block + &__block{
@@ -174,6 +178,9 @@
             &--md-dn{
                 display: none;
             }
+            &--poa{
+                display: none;
+            }
          }
     }
     &__show{
@@ -259,6 +266,7 @@
         font-size: 13px;
         line-height: 22px;
         color: #4d5156;
+        cursor: pointer;
     }
     &__bottom-input[type=checkbox]{
         display: none;
@@ -277,20 +285,23 @@
             top: 0;
         }
         .icon-check{
+            font-family: 'icomoon';
+            font-size: 7px;
+            color: #000;
             display: none;
             position: absolute;
-            width: 9px;
-            height: 7px;
-            fill: #000;
-            left: 4px;
-            top: 40%;
+            left: 5px;
+            top: 0;
             margin-top: -3.5px;
+            &::before{
+                content: "\e90a";
+            }
         }
         
     }
     &__bottom-input[type=checkbox]:checked + &__bottom-label--input{
         .icon-check{
-            display: block;
+            display: inline;
         }
     }
 }
@@ -476,10 +487,13 @@
     }
     &__ailability{
         .icon-check{
-            margin-right: 5px;
-            width: 10px;
-            height: 8px;
-            fill: #95c31a;
+            font-family: 'icomoon';
+            padding-right: 5px;
+            font-size: 10px;
+            color: #95c31a;
+            &::before{
+                content: '\e90a';
+            }
         }
         // @media screen and (min-width: 1300px){
         //     white-space: nowrap;;
@@ -704,10 +718,13 @@
         
     }
     .icon-check{
-        margin-right: 5px;
-        width: 10px;
-        height: 8px;
-        fill: #95c31a;
+        font-family: 'icomoon';
+        padding-right: 5px;
+        font-size: 10px;
+        color: #95c31a;
+        &::before{
+            content: '\e90a';
+        }
     }
     &__link{
         display: inline;
@@ -783,11 +800,16 @@
     }
     &__assessment{
         margin-left: 5px;
+        .icon-star{
+            font-family: 'icomoon';
+            font-size: 13px;
+            &::before{
+                content: "\e911";
+                color: #f8b704;
+            }
+        }
     }
-    &__assessment-star{
-        width: 14px;
-        height: 13px;
-    }
+    
     &__assessment-text{
         font-family: 'Open Sans';
         font-weight: 400;
@@ -810,8 +832,12 @@
         line-height: 22px;
         color: #202124;
         .icon-arrow-down{
-            width: 10px;
-            height: 8px;
+            font-family: 'icomoon';
+            font-size: 8px;
+            color: #000;
+            &::before{
+               content: "\e900";
+            }
         }
     }
     &__work-time{

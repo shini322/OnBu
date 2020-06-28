@@ -193,10 +193,13 @@
         line-height: 15px !important;
 
         .icon-check{
-            margin-right: 5px;
-            width: 10px;
-            height: 8px;
-            fill: #95c31a;
+            font-family: 'icomoon';
+            padding-right: 5px;
+            font-size: 10px;
+            color: #95c31a;
+            &::before{
+                content: '\e90a';
+            }
         }
         @media screen and (min-width: 1300px){
             white-space: nowrap;;
@@ -415,10 +418,13 @@
         
     }
     .icon-check{
-        margin-right: 5px;
-        width: 10px;
-        height: 8px;
-        fill: #95c31a;
+        font-family: 'icomoon';
+        padding-right: 5px;
+        font-size: 10px;
+        color: #95c31a;
+        &::before{
+            content: '\e90a';
+        }
     }
     &__link{
         display: inline;
@@ -502,6 +508,14 @@
     &__assessment{
         margin-left: 5px;
         margin-right: 5px;
+        .icon-star{
+            font-family: 'icomoon';
+            font-size: 13px;
+            &::before{
+                content: "\e911";
+                color: #f8b704;
+            }
+        }
     }
     &__assessment-star{
         width: 14px;
@@ -532,8 +546,11 @@
         line-height: 22px;
         color: #202124;
         .icon-arrow-down{
-            width: 10px;
-            height: 8px;
+            font-family: 'icomoon';
+            font-size: 10px;
+            &::before{
+                content: "\e90b";
+            }
         }
     }
     &__work-time{
@@ -593,8 +610,13 @@
         margin-right: 8px;
     }
     .icon-message{
-        width: 17px;
-        height: 13px;
+        padding-right: 8px;
+        font-family: 'icomoon';
+        font-size: 16px;
+        color: #000;
+        &::before{
+            content: "\e90f";
+        }
     }
     &__button-message{
         background-color: #cfd3d6;
@@ -671,10 +693,13 @@
     &__save-bookmark{
         
         .icon-heart{
-            margin-right: 3px;
-            width: 12px;
-            height: 11px;
-            fill: #b3b6bb;
+            padding-right: 3px;
+            font-family: 'icomoon';
+            font-size: 12px;
+            color: #b3b6bb;
+            &::before{
+                content: "\e90d";
+            }
         }
         
     }
@@ -721,22 +746,24 @@
         
     }
     &__time-input[type=checkbox]:checked + &__time-label{
-        .icon{
-            display: block;
+        .icon-check{
+            display: inline;
         }
     }
     &__time-label{
         cursor: pointer;
-        .icon{
+        .icon-check{
+            font-family: 'icomoon';
+            font-size: 10px;
             display: none;
             position: absolute;
             margin-top: -3.5px;
-            fill: #4d5156 !important;
-            width: 9px;
-            height: 7px;
-            fill: #000;
+            color: #4d5156;
             left: 4px;
-            top: 50%;
+            top: 30%;
+            &::before{
+                content: "\e90a";
+            }
         }
     }
     &__time{

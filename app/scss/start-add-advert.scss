@@ -440,6 +440,10 @@
         color: #fff;
         text-align: center;
         box-sizing: border-box;
+        transition: .3s;
+        &:hover{
+            filter: brightness(.9);
+        }
         @media screen and (min-width: 1024px){
             display: inline-block;
             margin-left: 15px;

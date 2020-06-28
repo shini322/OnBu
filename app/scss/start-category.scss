@@ -181,13 +181,17 @@
         max-width: 213px;
         width: 100%;
         margin: 0 auto;
-        font-family: 'Roboto';
+        font-family: 'Open Sans';
         font-weight: 400;
         font-size: 14px;
         line-height: 26px;
         color: #fff;
         background-color: #95c31a;
         border-radius: 3px;
+        transition: .3s;
+        &:hover{
+            filter: brightness(0.9);
+        }
         @media screen and (min-width: 1200px){
             background-color: #72777c;
         }

@@ -24,6 +24,7 @@
     font-style: normal;
 }
 @font-face {
+    font-display: swap;
     font-family: 'Cera Pro';
     src: url('../fonts/CeraPro-BoldItalic.eot');
     src: url('CeraPro-BoldItalic.eot?#iefix') format('embedded-opentype'),
@@ -33,6 +34,7 @@
     font-style: italic;
 }
 @font-face {
+    font-display: swap;
     font-family: 'Cera Pro';
     src: local('Cera Pro Medium'), local('Cera-Pro-Medium'),
         url('../fonts/CeraPro-Medium.woff2') format('woff2'),
@@ -42,6 +44,7 @@
     font-style: normal;
 }
 @font-face {
+    font-display: swap;
     font-family: 'Cera Pro';
     src: local('Cera Pro Light'), local('Cera-Pro-Light'),
         url('../fonts/CeraPro-Light.woff2') format('woff2'),
@@ -51,6 +54,7 @@
     font-style: normal;
   }
 @font-face {
+    font-display: swap;
     font-family: 'Cera Pro';
     src: local('Cera Pro Black'), local('Cera-Pro-Black'),
         url('../fonts/CeraPro-Black.woff2') format('woff2'),
@@ -112,6 +116,9 @@ button{
     border: none;
 }
 .active{
+    display: block;
+}
+.active-select{
     display: block !important;
 }
 .dark{
@@ -149,7 +156,7 @@ header{
         justify-content: space-between;
     }
     @media screen and (min-width: 1300px){
-        max-width: 1200px;
+        // max-width: 1200px;
         width: 100%;
         margin: 0 auto;
     }
@@ -226,8 +233,9 @@ header{
                 line-height: 26px;
                 border-bottom: 1px solid #fff;
                 color: #fff;
+                transition: .3s;
                 &:hover{
-                    border-bottom: none;
+                    border-bottom-color: transparent;
                 }
             }
             &:hover{
@@ -259,8 +267,10 @@ header{
                         font-size: 14px;
                         line-height: 17px;
                         color: #252525;
+                        border-bottom: 1px solid transparent;
+                        transition: .3s;
                         &:hover{
-                            text-decoration: underline;
+                            border-bottom-color: #252525;
                         }
                    }
                    &:hover{
@@ -291,9 +301,10 @@ header{
                                font-size: 14px;
                                line-height: 17px;
                                color: #252525;
-                            &:hover{
-                                text-decoration: underline;
-                            }
+                               border-bottom: 1px solid transparent;
+                               &:hover{
+                                    border-bottom-color: #252525;
+                               }
                            }
                        }
                    }
@@ -502,6 +513,7 @@ header{
         font-family: 'Open Sans Bold';
         font-size: 30px;
         line-height: normal;
+        
     }
     &__text{
         display: none;
@@ -679,22 +691,23 @@ header{
         width: 100%;
         max-width: 168px;
         margin: 55px auto 5px;
-        padding: 10px 20px;
+        padding: 10px 14px;
         font-family: 'Open Sans';
-        font-size: 13px;
+        font-size: 14px;
         line-height: 22px;
         color: #fff;
         text-align: center;
         background-color: #97b431;
         border-radius: 3px;
         box-sizing: border-box;
+        transition: .3s;
         @media screen and (min-width:1000px){            
             margin: 0;
             margin-left: auto;
             text-align: right;
         }
         &:hover{
-            text-decoration: underline;
+            filter: brightness(0.9);
         }
     }
     &__menu-link-site{
@@ -880,8 +893,7 @@ header{
             background-color: #dc4b40;
         }
         &--inst{
-            background-size: cover;
-            background-repeat: no-repeat;
+            background: linear-gradient(to bottom, #ab30a7 0%, #ea3552 100%);
         }
         &--odnoklassniki{
             background-color: #fc8f05;
@@ -932,7 +944,6 @@ header{
 }
 .assessment{
     max-width: 175px;
-    
     &__container{
         position: relative;
         padding: 18px 13px 16px;
@@ -951,6 +962,7 @@ header{
         top: -8px;
         transform: translateX(-50%);
         left: 50%;
+        white-space: nowrap;
     }
     &__total{
         text-align: center;

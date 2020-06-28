@@ -208,6 +208,7 @@ header{
             padding-right: 3px;
             font-family: 'icomoon';
             font-size: 11px;
+            color: #fff;
             &::before{
                 content: "\e90e";
             }
@@ -399,12 +400,41 @@ header{
         min-height: 50px;
         border-bottom: 1px solid #ececec;
         background-color: #f8f8f7;
-        .icon{
-            margin-left: 10px;
-            margin-right: 8px;
-            width: 13px;
-            height: 13px;
-            fill: #cccccc;
+        .icon-bell{
+            font-family: 'icomoon';
+            padding-left: 10px;
+            padding-right: 8px;
+            color: #d0d0d0;
+            &::before{
+                content: "\e905";
+            }
+        }
+        .icon-heart{
+            font-family: 'icomoon';
+            padding-left: 10px;
+            padding-right: 8px;
+            color: #d0d0d0;
+            &::before{
+                content: "\e90d";
+            }
+        }
+        .icon-list{
+            font-family: 'icomoon';
+            padding-left: 10px;
+            padding-right: 8px;
+            color: #d0d0d0;
+            &::before{
+                content: "\e913";
+            }
+        }
+        .icon-cog{
+            font-family: 'icomoon';
+            padding-left: 10px;
+            padding-right: 8px;
+            color: #d0d0d0;
+            &::before{
+                content: "\e90c";
+            }
         }
         sup{
             margin-top: -5px;
@@ -461,11 +491,14 @@ header{
         font-size: 14px;
         line-height: 22px;
         color: #fff;
-        .icon{
-            margin-right: 7px;
-            width: 16px;
-            height: 16px;
-            fill: #fff;
+        .icon-search{
+            font-family: 'icomoon';
+            padding-right: 7px;
+            font-size: 15px;
+            color: #fff;
+            &::before{
+                content: '\e904';
+            }
         }
     }
     // @media screen and (min-width:650px){
@@ -506,10 +539,14 @@ header{
     flex-direction: column;
 }
 .town{
-    font-family: 'Open Sans';
-    font-size: 12px;
-    line-height: 22px;
-    color: #fff;
+    &__select{
+        font-family: 'Open Sans';
+        font-size: 12px;
+        line-height: 22px;
+        color: #fff;
+        background-color: transparent;
+        border: none;
+    }
     &__icon{
         display: none;
         margin-right: 9px;
@@ -1116,7 +1153,7 @@ header{
 }
 .fast-search{
     padding: 11px 13px;
-    display: flex;
+    display: none;
     align-items: center;
     position: absolute;
     top: 10%;
@@ -1131,14 +1168,23 @@ header{
     transform: translateX(75%);
     transition: .3s;
     .icon-arrow-down{
-        margin-right: 12px;
+        display: inline-block;
+        font-family: 'icomoon';
+        font-size: 16px;
         transform: rotate(90deg);
-        width: 12px;
-        height: 16px;
-        fill: #fff;
+        color: #fff;
+        &::before{
+            content: "\e90b";
+        }
     }
     &:hover{
         transform: none;
+    }
+    &__text{
+        padding-left: 12px;
+    }
+    @media screen and(min-width:1024px){
+        display: flex;
     }
 }
 
@@ -1177,3 +1223,76 @@ header{
   transform: rotate(-45deg) translateX(4px) translateY(-4px);  
 }
 
+.settings{
+    display: flex;
+    padding-left: 17px;
+    align-items: center;
+    @media screen and (min-width: 768px){
+        padding-left: 45px;
+    }
+    &__text{
+        display: none;
+        font-family: 'Roboto';
+        font-size: 13px;
+        line-height: 17px;  
+        color: #fff;  
+        @media screen and (min-width: 768px){
+            display: inline;
+        }
+    }
+    .icon-cog{
+        padding-right: 9px;
+        font-family: 'icomoon';
+        font-size: 16px;
+        color: #fff;
+        &::before{
+            content: "\e90c";
+        }
+    }
+}
+.wallet{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-family: 'Roboto';
+    font-size: 13px;
+    line-height: 17px;
+    .icon-wallet{
+        display: none;
+        padding-right: 10px;
+        font-family: 'icomoon';
+        font-size: 18px;
+        color: #fff;
+        &::before{
+            content: "\e912";
+        }
+        @media screen and (min-width: 768px){
+            display: block;
+        }
+    }
+}
+.header{
+    &__menu{
+        &--price{
+            li{
+                display: none !important;
+                &:first-child{
+                    @media screen and (min-width: 768px){
+                        display: block !important;
+                    }
+                }
+                &:nth-child(2){
+                    @media screen and (min-width: 1366px){
+                        display: block !important;
+                    }
+                }
+                &:nth-child(3){
+                    @media screen and (min-width: 1600px){
+                        display: block !important;
+                    }
+                }
+            }
+        }
+    }
+    
+}

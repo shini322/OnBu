@@ -277,20 +277,23 @@
             top: 0;
         }
         .icon-check{
+            font-family: 'icomoon';
+            font-size: 7px;
+            color: #000;
             display: none;
             position: absolute;
-            width: 9px;
-            height: 7px;
-            fill: #000;
-            left: 4px;
-            top: 40%;
+            left: 5px;
+            top: 0;
             margin-top: -3.5px;
+            &::before{
+                content: "\e90a";
+            }
         }
         
     }
     &__bottom-input[type=checkbox]:checked + &__bottom-label--input{
         .icon-check{
-            display: block;
+            display: inline;
         }
     }
 }
@@ -476,10 +479,13 @@
     }
     &__ailability{
         .icon-check{
-            margin-right: 5px;
-            width: 10px;
-            height: 8px;
-            fill: #95c31a;
+            font-family: 'icomoon';
+            padding-right: 5px;
+            font-size: 10px;
+            color: #95c31a;
+            &::before{
+                content: '\e90a';
+            }
         }
         // @media screen and (min-width: 1300px){
         //     white-space: nowrap;;
@@ -704,10 +710,13 @@
         
     }
     .icon-check{
-        margin-right: 5px;
-        width: 10px;
-        height: 8px;
-        fill: #95c31a;
+        font-family: 'icomoon';
+        padding-right: 5px;
+        font-size: 10px;
+        color: #95c31a;
+        &::before{
+            content: '\e90a';
+        }
     }
     &__link{
         display: inline;
@@ -810,8 +819,12 @@
         line-height: 22px;
         color: #202124;
         .icon-arrow-down{
-            width: 10px;
-            height: 8px;
+            font-family: 'icomoon';
+            font-size: 8px;
+            color: #000;
+            &::before{
+               content: "\e900";
+            }
         }
     }
     &__work-time{

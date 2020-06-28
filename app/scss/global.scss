@@ -1,5 +1,16 @@
 
 @font-face {
+    font-family: 'icomoon';
+    src:  url('fonts/icomoon.eot?qfkkhg');
+    src:  url('../fonts/icomoon.eot') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf') format('truetype'),
+      url('../fonts/icomoon.woff?') format('woff'),
+      url('fonts/icomoon.svg?qfkkhg#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+@font-face {
     font-family: 'Roboto';
     src: url('../fonts/Roboto.ttf');
     src: url('Roboto-Regular.eot?#iefix') format('embedded-opentype'),
@@ -194,15 +205,14 @@ header{
     }
     &__town{
         .icon-location-arrow{
-            display: none;
-            margin-right: 6px;
-            width: 11px;
-            height: 11px;
-            fill: #fff;
-            @media screen and (min-width:768px){
-                display: inline-block;
+            padding-right: 3px;
+            font-family: 'icomoon';
+            font-size: 11px;
+            &::before{
+                content: "\e90e";
             }
         }
+        
         &:hover{
             span{
                 text-decoration: underline;
@@ -213,6 +223,7 @@ header{
     @media screen and (min-width:1630px){
         padding-right: 43px;
     }
+    
 }
 .logo{
     &__img{
@@ -324,11 +335,13 @@ header{
             display: flex !important;
             align-items: center;
             justify-content: space-between;
-            .icon{
-                width: 10px;
-                height: 10px;
-                fill: #3e3e3e;
+            .icon-arrow-down {
+                font-family: 'icomoon';
                 transform: rotate(270deg);
+                &:before{
+                    content: "\e90b";
+                }
+                    
             }
         }
     }
@@ -413,8 +426,13 @@ header{
                 }
             }
             .icon-arrow-down{
-                transform: rotate(270deg);
+                display: inline-block;
                 margin-left: auto;
+                font-family: 'icomoon';
+                transform: rotate(270deg);
+                &::before{
+                    content: "\e90b";
+                }
             }
             >ul{
                 display: none;
@@ -880,23 +898,53 @@ header{
         box-sizing: border-box;
         filter: grayscale(100%);
         transition: .3s;
-        .icon{
-            width: 13px;
-            height: 13px;
-            fill: #fff;
-            stroke: #fff;
-        }
         &--vk{
             background-color: #6693bb;
+            .icon-vk{
+                font-family: 'icomoon';
+                font-size: 14px;
+                color: #fff;
+                &:before{
+                    content: "\e909";
+                }
+                
+            }
         }
         &--google{
             background-color: #dc4b40;
+            .icon-google{
+                font-family: 'icomoon';
+                font-size: 14px;
+                color: #fff;
+                &:before{
+                    content: "\e906";
+                }
+                
+            }
         }
         &--inst{
             background: linear-gradient(to bottom, #ab30a7 0%, #ea3552 100%);
+            .icon-instagram{
+                font-family: 'icomoon';
+                font-size: 14px;
+                color: #fff;
+                &:before{
+                    content: "\e907";
+                }
+                
+            }
         }
         &--odnoklassniki{
             background-color: #fc8f05;
+            .icon-odnoklassniki{
+                font-family: 'icomoon';
+                font-size: 14px;
+                color: #fff;
+                &:before{
+                    content: "\e908";
+                }
+                
+            }
         }
         &:hover{
             filter: none;

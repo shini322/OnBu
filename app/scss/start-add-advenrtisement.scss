@@ -20,6 +20,7 @@
         }
         .custom-select__current{
             color: #8b929c;
+            height: 100%;
         }
     }
     &__item{
@@ -146,7 +147,7 @@
         width: 100%;
         padding: 5px 12px;
         max-width: 218px;
-        min-height: 38px;
+        height: 39px;
         border: 1px solid #d3d3d3;
         font-family: 'Roboto';
         font-size: 13px;

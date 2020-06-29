@@ -1351,6 +1351,13 @@ select{
       width: 100%;
       height: 39px;
       padding: 0;
+      
+  }
+  .custom-select:not(select){
+    display: none;
+      @media screen and (min-width:1023px){
+           display: block;
+      }
   }
   .custom-select--show .custom-select__current::after {
     -webkit-transform: rotate(-180deg);
@@ -1408,6 +1415,7 @@ select{
   }
   select.custom-select {
     @media screen and (min-width:1024px){
+   
     opacity: 0;
     position: absolute;
     height: 1px;

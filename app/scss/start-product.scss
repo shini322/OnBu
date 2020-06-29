@@ -682,8 +682,8 @@
         &:focus{
             color: red;
             border-bottom-color: red;
-            .icon{
-                fill: red;
+            .icon-heart{
+                color: red;
             }
         }
     }
@@ -697,6 +697,7 @@
             font-family: 'icomoon';
             font-size: 12px;
             color: #b3b6bb;
+            transition: .3s;
             &::before{
                 content: "\e90d";
             }

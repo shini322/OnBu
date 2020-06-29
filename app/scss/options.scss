@@ -52,9 +52,12 @@
             }
         }
         &--w10{
-            width: 25%;
+            width: 50%;
 
             @media screen and (min-width:767px){
+                width: 25%;
+            }
+            @media screen and (min-width:1023px){
                 width: 10%;
             }
         }
@@ -111,6 +114,23 @@
         width: 100%;
         margin-right: -8px;
         
+    }
+    &__line-button{
+        display: flex;
+        align-items: center;
+        margin: 0 8px 8px;
+        &-text{
+            font-size: 13px;
+            line-height: 17px;
+            color: #306da0;
+            border-bottom: 1px solid #306da0;
+            font-family: "Roboto";
+            transition: .3s;
+
+            &:hover{
+                border-color: transparent;
+            }
+        }
     }
     &__w100{
         width: 100%;
@@ -175,18 +195,36 @@
         cursor: pointer;
     }
     &__explanation{
-      
+        margin-top: 10px;
         font-family: 'Open Sans';
         font-size: 12px;
         line-height: 16px;
         color: #8b929c;
+        @media screen and (min-width:767px){
+            margin-top: 0;
+        }
     }
     &__add-photo-img{
         max-width: 100%;
         max-height: 29px;
         margin-top: 21px;
     }
-   
+   &__main-button{
+       margin-top: 75px;
+       font-size: 15px;
+       line-height: 22px;
+       color: #fff;
+       font-family: "Open sans";
+       display: inline-block;
+       padding: 10px 22px;
+       background-color: #97b431;
+       border-radius: 3px;
+       transition: .3s;
+
+       &:hover{
+           opacity: .7;
+       }
+   }
 }
 .options-aside{
     width: 100%;
@@ -242,6 +280,44 @@
     margin-top: 5px;
    
     clear: both;
+    }
+    &__social{
+        display: flex;
+        align-items: center;
+    }
+    &__social-item + &__social-item{
+        margin-left: 15px;
+    }
+    &__social-icon-container{
+        width: 57px;
+        height: 57px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &--viber{
+            background-color: #8f5db7;
+        }
+        &--whuts{
+            background-color: #25d366;
+        }
+        &--teleg{
+            background-color: #0088cc;
+        }
+        &--skype{
+            background-color: #2ba4e0;
+        }
+
+    }
+    &__social-name{
+        text-align: center;
+        display: block;
+        font-size: 10px;
+        line-height: 13px;
+        color: #202124;
+        margin-top: 5px;
+        text-transform: uppercase;
     }
     &__tegs-item{
         font-family: 'Roboto';

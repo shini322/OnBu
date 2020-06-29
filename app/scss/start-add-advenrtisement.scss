@@ -18,6 +18,9 @@
         @media screen and (min-width: 1024px){
             max-width: 100%;
         }
+        .custom-select__current{
+            color: #8b929c;
+        }
     }
     &__item{
         &--p{

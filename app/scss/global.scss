@@ -1056,10 +1056,14 @@ header{
         text-align: center;
     }
     &__bottom-text{
+        
         font-family: 'Open Sans';
         font-size: 13px;
         line-height: 22px;
         color: #5b6166;
+        @media screen and (min-width:1024px){
+            padding-right: 7%;
+        }
     }
    
 

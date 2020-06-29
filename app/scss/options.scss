@@ -22,6 +22,7 @@
         width: 100%;
     }
     &__item-container{
+        position: relative;
         box-sizing: border-box;
         padding-right: 8px;
         margin-bottom: 10px;
@@ -59,6 +60,12 @@
             }
             @media screen and (min-width:1023px){
                 width: 10%;
+            }
+        }
+        &:hover{
+            .work-time{
+                opacity: 1;
+                z-index: 10;
             }
         }
      
@@ -225,6 +232,21 @@
            opacity: .7;
        }
    }
+   &__work-time-container{
+       display: inline-block;
+       margin-top: 8px;
+       font-family: 'Open Sans';
+       font-size: 13px;
+       line-height: 17px;
+       color: #202124;
+       cursor: pointer;
+       &:hover{
+           .work-time{
+               opacity: 1;
+               z-index: 10;
+           }
+       }
+   }
 }
 .options-aside{
     width: 100%;
@@ -298,17 +320,52 @@
 
         &--viber{
             background-color: #8f5db7;
+            .icon-viber{
+                font-family: 'icomoon';
+                font-size: 26px;
+                color: #fff;
+                &::before{
+                    content: "\e916";
+                }
+            }
         }
         &--whuts{
             background-color: #25d366;
+            .icon-whatsapp{
+                font-family: 'icomoon';
+                font-size: 26px;
+                color: #fff;
+                &::before{
+                    content: "\e918";
+                }
+            }
         }
         &--teleg{
             background-color: #0088cc;
+            .icon-telegram{
+                font-family: 'icomoon';
+                font-size: 26px;
+                color: #fff;
+                &::before{
+                    content: "\e917";
+                }
+            }
         }
         &--skype{
             background-color: #2ba4e0;
+            .icon-skype{
+                font-family: 'icomoon';
+                font-size: 26px;
+                color: #fff;
+                &::before{
+                    content: "\e914";
+                }
+            }
         }
-
+        
+        
+        
+        
     }
     &__social-name{
         text-align: center;
@@ -318,6 +375,10 @@
         color: #202124;
         margin-top: 5px;
         text-transform: uppercase;
+        font-family: 'Open Sans';
+        font-size: 10px;
+        line-height: 13px;
+        color: #202124;
     }
     &__tegs-item{
         font-family: 'Roboto';
@@ -454,6 +515,10 @@
         opacity: 0;
         z-index: -1;
         transition: .3s;
+        left: -50%;
+        &--select{
+            left: 0;
+        }
     }
 }
 
@@ -531,4 +596,51 @@
         line-height: 17px;
     }
     
+}
+.add-price{
+    &__item-link-container{
+        margin-bottom: 10px;
+    }
+    &__item-link{
+        position: relative;
+        margin-bottom: 10px;
+        font-family: 'Open Sans';
+        font-size: 13px;
+        line-height: 17px;
+        color: #4d5156;
+        .icon-check{
+            display: none;
+            position: absolute;
+            left: 4px;
+            top: 1px;
+            font-family: 'icomoon';
+            font-size: 8px;
+            color: #000;
+            &::before{
+                content: '\e90a';
+            }
+        }
+    }
+    &__item-input{
+        display: none;
+    }
+    &__item-input[type=checkbox] + &__item-link{
+        padding-left: 24px;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border: 1px solid #d3d3d3;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            box-sizing: border-box;
+        }
+    }
+    &__item-input[type=checkbox]:checked + &__item-link{
+        .icon-check{
+            display: inline;
+        }
+    }
 }

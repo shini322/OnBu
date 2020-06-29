@@ -49,8 +49,8 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        &--ml{
-             
+        &--max-width{
+             max-width: 566px;
         }
         &--md{
             display: block;

@@ -60,8 +60,15 @@
         &--border-right{
             border-right: none !important;
         }
+        &--border-bottom-xl{
+            border-bottom: 1px solid #d3d3d3;
+            @media screen and (min-width: 1630px){
+                border-bottom: none;
+            }
+        }
         &--border-bottom{
             border-bottom: 1px solid #d3d3d3;
+            
         }
         &::after{
             content: '';

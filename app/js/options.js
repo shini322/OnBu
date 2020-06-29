@@ -1,4 +1,6 @@
-//Получаем все "select" по селектору
+
+if (screen.width >= 1024) {
+    //Получаем все "select" по селектору
 const selects = document.querySelectorAll('.custom-select')
 //переборка по полученным "select"
 for(let i = 0; i < selects.length; i++){
@@ -66,7 +68,7 @@ for(let i = 0; i < selects.length; i++){
 	const mobileFn = () => {
 		for(let j = 0; j < selects.length; j++){
 			let mobileSelect = selects[j]
-			mobileSelect.addEventListener('change', ()=> {
+			mobileSelect.addEventListener('click', ()=> {
 				mobileSelect.nextElementSibling.querySelector('.custom-select__current').textContent = mobileSelect.value
 			})
 		}
@@ -97,4 +99,8 @@ for(let i = 0; i < selects.length; i++){
 			y();
 		 }
 	 }
+}
+
+} else {
+    
 }

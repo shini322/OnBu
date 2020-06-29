@@ -1334,36 +1334,23 @@ header{
     
 }
 
-// select{
-//     appearance: none;
-// -webkit-appearance: none;
-// -moz-appearance: none;
-// background-color: #fff;
-//     color: #4d5156;
-//     border: 1px solid #d3d3d3;
-// }
-// option{
-//     padding: 15px;
-//     min-height: 40px;
-// }
-// select::-ms-expand {
-//     display: none;
-//  }
+select{
+   
+    background-color: #fff;
+    color: #4d5156;
+    border: 1px solid #d3d3d3;
+}
 
 
-select {
-    opacity: 0;
-    position: absolute;
-    height: 1px;
-    width: 1px;
-    &.custom-select{
-        position: absolute;
-    }
-  }
-  
+
+
+
 
   .custom-select{
       position: relative;
+      width: 100%;
+      height: 39px;
+      padding: 0 5px;
   }
   .custom-select--show .custom-select__current::after {
     -webkit-transform: rotate(-180deg);
@@ -1376,7 +1363,12 @@ select {
   .custom-select__current {
     width: 100%;
     border: 1px solid #d3d3d3;
+<<<<<<< HEAD
     padding: 10px;
+=======
+    padding: 11px;
+    border-radius: 3px;
+>>>>>>> 52efd6735af987499303c458e8ebccdde79f443a
     position: relative;
     cursor: pointer;
     background-color: #fff;
@@ -1418,5 +1410,17 @@ select {
   }
   .custom-select__item:hover, .custom-select__item:focus {
     background-color: #e6e6e6;
+  }
+  select.custom-select {
+    @media screen and (min-width:1024px){
+    opacity: 0;
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    
+    }
   }
   

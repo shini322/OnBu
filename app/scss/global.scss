@@ -1335,10 +1335,8 @@ header{
 }
 
 select{
-    appearance: none;
--webkit-appearance: none;
--moz-appearance: none;
-background-color: #fff;
+   
+    background-color: #fff;
     color: #4d5156;
     border: 1px solid #d3d3d3;
 }
@@ -1346,21 +1344,13 @@ background-color: #fff;
 
 
 
-select {
-    @media screen and (min-width:1024px){
-        opacity: 0;
-    position: absolute;
-    height: 1px;
-    width: 1px;
-    &.custom-select{
-        position: absolute;
-    }
-    }
-  }
-  
+
 
   .custom-select{
       position: relative;
+      width: 100%;
+      height: 39px;
+      padding: 0 5px;
   }
   .custom-select--show .custom-select__current::after {
     -webkit-transform: rotate(-180deg);
@@ -1373,7 +1363,7 @@ select {
   .custom-select__current {
     width: 100%;
     border: 1px solid #d3d3d3;
-    padding: 10px;
+    padding: 11px;
     border-radius: 3px;
     position: relative;
     cursor: pointer;
@@ -1416,5 +1406,17 @@ select {
   }
   .custom-select__item:hover, .custom-select__item:focus {
     background-color: #e6e6e6;
+  }
+  select.custom-select {
+    @media screen and (min-width:1024px){
+    opacity: 0;
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    
+    }
   }
   

@@ -1,9 +1,10 @@
 let elem = document.getElementById('burger');
   let elem1 = document.getElementById('menu-adaptive');
-  let elem2 = document.getElementById('wrapper');
+  let elem2 = document.getElementById('sub');
   elem.onclick = function(event){
     elem.classList.toggle('active');    
     elem1.classList.toggle('active');
+    elem2.classList.toggle('active-block');
   }
   
 
@@ -16,7 +17,7 @@ let elem3 = document.getElementById('category__more-settings');
   let elem5 = document.getElementById('menu-adaptive__item--submenu');
   let elem6 = document.getElementById('menu-adaptive__item--submenu-item');
   elem5.onclick = function(event){
-    elem6.classList.toggle('active');
+    elem6.classList.toggle('active-block');
   }
   var starRatingStep = raterJs( {
     starSize:25,
@@ -130,4 +131,12 @@ y();
 }
 }
   
-  
+const ratingItemsList = document.querySelectorAll('.rating__item');
+const ratingItemsArray = Array.prototype.slice.call(ratingItemsList);
+
+ratingItemsArray.forEach(item => {
+  item.addEventListener('click', () => {
+    const { itemValue} = item.dataset;
+    item.parentNode.dataset.totalValue = item.dataset.itemValue;
+})
+});

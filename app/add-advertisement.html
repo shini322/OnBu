@@ -41,7 +41,7 @@
         <main class="main">
             <form class="advertisement">
                 <div class="container">
-                    <div class="page-title">Добавить объявление</div>
+                    <h1>Добавить объявление</h1>
                     <div class="advertisement__inner">
                         <div class="advertisement__block">
                             <div class="advertisement__container">
@@ -130,7 +130,7 @@
                                             </select>
                                         </div>
                                         <div class="advertisement__price-right">
-                                            35 <span class="advertisement__other-price">$ </span><span class="advertisement__other-price--other-ff"> или</span> 8280<span class="advertisement__other-price rubl"> e</span>
+                                            35 <span class="advertisement__other-price">$ </span><span class="advertisement__other-price--other-ff"> или</span> 8280<span class="advertisement__other-price"> ₽</span>
                                         </div>  
                                     </div>
                                 </div>
@@ -175,7 +175,7 @@
                             <div class="advertisement__hidden-settings" id="advertisement__hidden-settings">
                                 <div class="advertisement__item advertisement__item--p">
                                     <div class="advertisement__item-title">Наличие на складе</div>
-                                    <div class="advertisement__item-container">
+                                    <div class="advertisement__item-container advertisement__item-container--max-width">
                                         <select name="" id="" class="custom-select advertisement__select">
                                             <option value="1" class="advertisement__option">В наличии</option>
                                             <option value="1" class="advertisement__option">В наличии</option>
@@ -185,7 +185,7 @@
                                 </div>
                                 <div class="advertisement__item advertisement__item--p">
                                     <div class="advertisement__item-title">Состояние</div>
-                                    <div class="advertisement__item-container">
+                                    <div class="advertisement__item-container advertisement__item-container--max-width">
                                         <select name="" id="" class="custom-select advertisement__select">
                                             <option value="1" class="advertisement__option">Б/у</option>
                                             <option value="1" class="advertisement__option">Б/у</option>
@@ -210,9 +210,11 @@
                         </div>
                         <div class="product-side advertisement__product-side">
                             <div class="advertisement__how-seen">Как выглядит объявление</div>
-                            <a href="#" class="product-side__title">
-                                Двигатель к Audi A3, 2012 г.
-                            </a>
+                            <div class="product-side__title-container">
+                                <a href="#" class="product-side__title">
+                                    Двигатель к Audi A3, 2012 г.
+                                </a>
+                            </div>
                             <div class="product-side__container">
                                 <a href="#" class="product-side__img-block">
                                     <img src="img/product/main-img-1.jpg" alt="" class="product-side__img">
@@ -228,7 +230,7 @@
                                         
                                         <div class="product-item__price">
                                             <div class="product-item__price-left product-side__price">
-                                                <div class="product-side__price-container">659<span class="product-item__price--ruble product-side__price--ruble rubl">e</span></div>                                    
+                                                <div class="product-side__price-container">659<span class="product-item__price--ruble product-side__price--ruble">₽</span></div>                                    
                                                 <div class="product-item__ailability product-side__ailability"><span class="icon-check"></span>в наличии</div>
                                             </div>
                                         </div>
@@ -263,7 +265,7 @@
                 
             </form>
         </main>
-        <script src="js/add-advenrtisement.js"></script>
+        <script src="js/add-advenrtisement.js" async defer></script>
         <link rel="stylesheet" href="css/add-advenrtisement.min.css">
     </div>
 </body>

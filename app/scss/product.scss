@@ -131,10 +131,10 @@
         }
         &--hidden{
             display: none;
-            @media screen and (min-width: 1630px){
-                display: flex;
-                flex-wrap: wrap;
-            }
+            // @media screen and (min-width: 1630px){
+            //     display: flex;
+            //     flex-wrap: wrap;
+            // }
             .filters__select-container{
                 &:first-child{
                     .custom-select__current{

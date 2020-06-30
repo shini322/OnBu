@@ -1,10 +1,18 @@
 let elem = document.getElementById('burger');
   let elem1 = document.getElementById('menu-adaptive');
-  let elem2 = document.getElementById('wrapper');
+  let elem2 = document.getElementById('sub');
   elem.onclick = function(event){
     elem.classList.toggle('active');    
     elem1.classList.toggle('active');
+    elem2.classList.toggle('active-block');
   }
+  
+  let elem0 = document.getElementById('menu-adaptive__item--submenu');
+  let elem06 = document.getElementById('menu-adaptive__item--submenu-item');
+  elem0.onclick = function(event){
+    elem06.classList.toggle('active-block');
+  }
+
 var galleryThumbs = new Swiper('.product-item__gallery-thumbs', {
     spaceBetween: 10,
     slidesPerView: 10,
@@ -150,3 +158,13 @@ y();
 }
 }
 }
+
+const ratingItemsList = document.querySelectorAll('.rating__item');
+const ratingItemsArray = Array.prototype.slice.call(ratingItemsList);
+
+ratingItemsArray.forEach(item => {
+  item.addEventListener('click', () => {
+    const { itemValue} = item.dataset;
+    item.parentNode.dataset.totalValue = item.dataset.itemValue;
+})
+});

@@ -266,7 +266,8 @@
         }       
     }
     &__main-img{
-        width: 320px;
+        width: 100vw;
+        height: auto;
         @media screen and (min-width: 768px){
             width: 640px !important;
             height: 480px;
@@ -576,6 +577,13 @@
         opacity: 0;
         z-index: -1;
         transition: .3s;
+        left: 50%;
+        transform: translateX(-58%);
+        @media screen and (min-width:768px){
+            right: 0;
+            transform: none;
+            left: auto;
+        }
     }
     &__buttons-container{
         margin-top: 25px;
@@ -607,13 +615,14 @@
         color: #fff;
         &::before{
             content: '';
-            position: absolute;
+           margin-right: 9px;
+           flex-shrink: 0;
             width: 14px;
             height: 17px;
             background-image: url(../img/phone.png);
-            background-size: cover;
+            background-size: contain;
             background-repeat: no-repeat;
-            left: 25px;
+
         }
         &:hover{
             background-color: #819b25;
@@ -692,7 +701,7 @@
         &:hover{
             border-bottom-color: #b3b6bb;
         }
-        &:focus{
+        &.js-active{
             color: red;
             border-bottom-color: red;
             .icon-heart{

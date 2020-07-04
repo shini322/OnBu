@@ -1,4 +1,10 @@
-
+@font-face{
+    font-family: 'ALS Rubl';
+    src: url(../fonts/rouble.otf);
+}
+.rubl{
+    font-family: 'ALS Rubl';
+}
 .container{
     
     
@@ -355,13 +361,10 @@
         border-radius: 3px;
         transition: .3s;
         &:hover{
-            background-color: #819b25;
+            filter: brightness(0.9);
         }
         @media screen and (min-width: 1200px){
             background-color: #72777c;
-            &:hover{
-                background-color: #8b929c;
-            }
         }
     }
     &__more-settings{
@@ -377,19 +380,14 @@
         }
     }
     &__bottom-settings{
-        position: relative;
         display: flex;
         flex-wrap: wrap;
         padding: 0 10px 20px;
         align-items: center;
         justify-content: center;
-        
         margin-top: 20px;
         .custom-select{
             width: auto;
-        }
-        @media screen and (max-width: 1024px){
-            box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.1);
         }
         @media screen and (min-width: 540px){
             margin-top: 6px;

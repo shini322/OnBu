@@ -89,10 +89,9 @@
 
   let elem = document.getElementById('burger');
   let elem1 = document.getElementById('menu-adaptive');
-  let elem2 = document.getElementById('sub');
+  let elem2 = document.getElementById('wrapper');
   elem.onclick = function(event){
     elem.classList.toggle('active');    
-    elem1.classList.toggle('active');
     elem1.classList.toggle('active');
   }
   let elem3 = document.getElementById('filters__more-settings');

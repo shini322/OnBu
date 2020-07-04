@@ -1,4 +1,10 @@
-
+@font-face{
+    font-family: 'ALS Rubl';
+    src: url(../fonts/rouble.otf);
+}
+.rubl{
+    font-family: 'ALS Rubl';
+}
 .page-content{
     @media screen and (min-width: 1630px){
         &__container{
@@ -46,9 +52,6 @@
     @media screen and (min-width: 1630px){
         padding: 0;
         overflow: visible;
-    }
-    &__title-container{
-        margin-bottom: 10px;
     }
     &__title{        
         font-family: 'Roboto';
@@ -244,7 +247,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        margin-top: 42px;
+        margin-top: 14px;
         transform: initial !important;
         @media screen and (min-width: 1024px){
             justify-content: start;
@@ -274,9 +277,6 @@
         }
         @media screen and (min-width: 1024px){
             width: auto !important;
-        }
-        @media screen and (max-width: 500px){
-            width: 60%;
         }
     }
     .swiper-slide-thumb-active{
@@ -606,13 +606,13 @@
         font-family: 'Open Sans';
         transition: .3s;
         &:hover{
-            background-color: #8b929c;
+            filter: brightness(0.9);
         }
     }
     &__button-number{
-        position: relative;
         background-color: #97b431;
         color: #fff;
+<<<<<<< HEAD
         &::before{
             content: '';
            margin-right: 9px;
@@ -627,6 +627,8 @@
         &:hover{
             background-color: #819b25;
         }
+=======
+>>>>>>> parent of 6371368... 123
     }
     &__button-img{
         margin-right: 8px;
@@ -751,19 +753,28 @@
     
     &__time-input[type=checkbox] + &__time-label{
         position: relative;
-        padding-left: 9px;
+        padding-left: 24px;
         font-family: 'Open Sans';
         font-size: 14px;
         line-height: 17px;
         color: #252525;
-        
+        &::before{
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border: 1px solid #d3d3d3;
+            left: 0;
+            bottom: 50%;
+            transform: translateY(50%);
+        }
         
     }
-    // &__time-input[type=checkbox]:checked + &__time-label{
-    //     .icon-check{
-    //         display: inline;
-    //     }
-    // }
+    &__time-input[type=checkbox]:checked + &__time-label{
+        .icon-check{
+            display: inline;
+        }
+    }
     &__time-label{
         cursor: pointer;
         .icon-check{

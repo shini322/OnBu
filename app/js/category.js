@@ -3,8 +3,12 @@ let elem = document.getElementById('burger');
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   let elem2 = document.getElementById('sub');
   var bodyNode = document.body || document.getElementsByTagName('body')[0];
+=======
+  let elem2 = document.getElementById('wrapper');
+>>>>>>> parent of 6371368... 123
 =======
   let elem2 = document.getElementById('wrapper');
 >>>>>>> parent of 6371368... 123
@@ -21,9 +25,12 @@ let elem = document.getElementById('burger');
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     elem2.classList.toggle('active-block');
    
     
+=======
+>>>>>>> parent of 6371368... 123
 =======
 >>>>>>> parent of 6371368... 123
 =======
@@ -221,6 +228,10 @@ y();
   
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+  
+>>>>>>> parent of 6371368... 123
+=======
   
 >>>>>>> parent of 6371368... 123
 =======

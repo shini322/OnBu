@@ -16,6 +16,7 @@ let elem = document.getElementById('burger');
     elem1.classList.toggle('active');
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   
   let elem0 = document.getElementById('menu-adaptive__item--submenu');
   let elem06 = document.getElementById('menu-adaptive__item--submenu-item');
@@ -26,6 +27,8 @@ let elem = document.getElementById('burger');
   like.onclick = function(event){
     like.classList.toggle('js-active');
   }
+=======
+>>>>>>> parent of 6371368... 123
 =======
 >>>>>>> parent of 6371368... 123
 var galleryThumbs = new Swiper('.product-item__gallery-thumbs', {
@@ -157,5 +160,9 @@ else {
 y();
 }
 }
+<<<<<<< HEAD
+}
+>>>>>>> parent of 6371368... 123
+=======
 }
 >>>>>>> parent of 6371368... 123
